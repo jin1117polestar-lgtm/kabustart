@@ -1,0 +1,12 @@
+{
+  "tickers": ["7203.T", "6758.T", "9984.T", "8306.T", "4063.T"],
+  "initial_capital": 1000000,
+  "max_positions": 5,
+  "strategy": {
+    "sma_short": 5,
+    "sma_long": 25,
+    "rsi_period": 14,
+    "rsi_buy_max": 70,
+    "rsi_sell_min": 75
+  }
+}

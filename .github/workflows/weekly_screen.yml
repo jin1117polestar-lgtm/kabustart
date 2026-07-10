@@ -1,0 +1,36 @@
+name: weekly-screen
+
+on:
+  schedule:
+    - cron: "0 0 * * 6"   # 土曜 9:00 JST (休場中に処理)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install yfinance pandas numpy
+
+      - name: Run weekly screening job
+        run: python jobs/run_screen.py
+
+      - name: Build dashboard data
+        run: python dashboard/build.py
+
+      - name: Commit state & dashboard
+        run: |
+          git config user.name "kabu-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state/ docs/data.json
+          git diff --cached --quiet || git commit -m "weekly: $(date -u +%Y-%m-%d) screening update"
+          git push

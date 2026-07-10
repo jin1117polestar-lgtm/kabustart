@@ -3,9 +3,15 @@
   "meanrev": 0.33,
   "breakout": 0.33,
   "daily_returns_log": {
-    "trend": [],
-    "meanrev": [],
-    "breakout": []
+    "trend": [
+      0.0
+    ],
+    "meanrev": [
+      0.0
+    ],
+    "breakout": [
+      0.0
+    ]
   },
   "updated": null
 }

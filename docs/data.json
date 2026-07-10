@@ -1,7 +1,7 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-07-10",
   "mode": "paper",
-  "current_equity": 1000000,
+  "current_equity": 1000000.0,
   "initial_capital": 1000000,
   "total_return_pct": 0.0,
   "radar": {
@@ -11,14 +11,36 @@
     "efficiency": 33.3,
     "stability": 100
   },
-  "equity_curve": [],
+  "equity_curve": [
+    {
+      "date": "2026-07-10",
+      "equity": 1000000.0
+    }
+  ],
   "strategy_weights": {
     "trend": 0.34,
     "meanrev": 0.33,
     "breakout": 0.33
   },
-  "positions": [],
-  "recent_trades": [],
+  "positions": [
+    {
+      "ticker": "4063.T",
+      "shares": 7,
+      "avg_price": 7320.0,
+      "strategy": "trend",
+      "entry_date": "2026-07-10"
+    }
+  ],
+  "recent_trades": [
+    {
+      "date": "2026-07-10",
+      "ticker": "4063.T",
+      "side": "BUY",
+      "shares": 7,
+      "price": 7320.0,
+      "strategy": "trend"
+    }
+  ],
   "universe": [
     "7203.T",
     "6758.T",

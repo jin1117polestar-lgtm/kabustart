@@ -1,0 +1,29 @@
+{
+  "cash": 948760.0,
+  "positions": {
+    "4063.T": {
+      "shares": 7,
+      "avg_price": 7320.0,
+      "strategy": "trend",
+      "entry_date": "2026-07-10",
+      "trail_stop": null
+    }
+  },
+  "history": [
+    {
+      "date": "2026-07-10",
+      "ticker": "4063.T",
+      "side": "BUY",
+      "shares": 7,
+      "price": 7320.0,
+      "strategy": "trend"
+    }
+  ],
+  "equity_curve": [
+    {
+      "date": "2026-07-10",
+      "equity": 1000000.0
+    }
+  ],
+  "last_run_date": "2026-07-10"
+}

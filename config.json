@@ -1,0 +1,11 @@
+{
+  "mode": "paper",
+  "initial_capital": 1000000,
+  "max_positions": 6,
+  "strategies_enabled": ["trend", "meanrev", "breakout"],
+  "risk": {
+    "daily_loss_limit_pct": 2.0,
+    "drawdown_limit_pct": 15.0,
+    "max_position_pct": 25.0
+  }
+}

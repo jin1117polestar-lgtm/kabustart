@@ -1,0 +1,11 @@
+{
+  "trend": 0.34,
+  "meanrev": 0.33,
+  "breakout": 0.33,
+  "daily_returns_log": {
+    "trend": [],
+    "meanrev": [],
+    "breakout": []
+  },
+  "updated": null
+}

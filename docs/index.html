@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kabu-bot ダッシュボード</title>
+<style>
+  :root {
+    --bg: #f5f4f0; --card: #ffffff; --border: #e2e0d8;
+    --text: #17171a; --text-2: #5c5b57; --text-muted: #8b8a84;
+    --accent: #2a5fd6; --up: #0f8a52; --down: #d0392f; --amber: #c07a12;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212; --card: #1c1c1c; --border: #2e2e2e;
+      --text: #f2f2f0; --text-2: #b8b6ad; --text-muted: #8b8a84;
+      --accent: #6ea0ff; --up: #3bd08a; --down: #ef6a60; --amber: #e0a53c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Hiragino Sans, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 16px 16px 48px; }
+  header { padding: 8px 0 20px; }
+  header h1 { font-size: 18px; font-weight: 600; margin: 0 0 4px; }
+  header .sub { font-size: 13px; color: var(--text-muted); }
+  .badge {
+    display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px;
+    background: var(--border); color: var(--text-2); margin-left: 6px; vertical-align: middle;
+  }
+  .kpi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px; }
+  .kpi { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .kpi .label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+  .kpi .value { font-size: 22px; font-weight: 600; }
+  .kpi .value.pos { color: var(--up); }
+  .kpi .value.neg { color: var(--down); }
+  section { margin-bottom: 22px; }
+  section h2 { font-size: 14px; font-weight: 600; color: var(--text-2); margin: 0 0 10px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+  .chart-box { position: relative; width: 100%; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 7px 4px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { color: var(--text-muted); font-weight: 500; font-size: 12px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .side-buy { color: var(--accent); font-weight: 600; }
+  .side-sell { color: var(--text-2); font-weight: 600; }
+  .pnl-pos { color: var(--up); }
+  .pnl-neg { color: var(--down); }
+  .weight-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 13px; }
+  .weight-row .name { width: 72px; color: var(--text-2); }
+  .weight-bar-bg { flex: 1; background: var(--border); border-radius: 6px; height: 10px; overflow: hidden; }
+  .weight-bar-fill { height: 100%; background: var(--accent); border-radius: 6px; }
+  .weight-row .pct { width: 44px; text-align: right; font-variant-numeric: tabular-nums; }
+  .empty { color: var(--text-muted); font-size: 13px; padding: 8px 0; }
+  .learn-entry { border-bottom: 1px solid var(--border); padding: 8px 0; font-size: 13px; }
+  .learn-entry:last-child { border-bottom: none; }
+  .learn-entry .date { color: var(--text-muted); font-size: 12px; }
+  .tag-adopt { color: var(--up); }
+  .tag-keep { color: var(--text-muted); }
+  .scroll-x { overflow-x: auto; }
+  footer { text-align: center; font-size: 11px; color: var(--text-muted); padding-top: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>kabu-bot ダッシュボード <span class="badge" id="mode-badge">-</span></h1>
+    <div class="sub" id="updated-line">読み込み中...</div>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="label">評価額</div>
+      <div class="value" id="kpi-equity">-</div>
+    </div>
+    <div class="kpi">
+      <div class="label">通算損益率</div>
+      <div class="value" id="kpi-return">-</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>成績レーダー</h2>
+    <div class="card">
+      <div class="chart-box" style="height: 260px;">
+        <canvas id="radarChart" role="img" aria-label="勝率・損益率・DD耐性・取引効率・安定性の5軸レーダーチャート"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>資産推移</h2>
+    <div class="card">
+      <div class="chart-box" style="height: 220px;">
+        <canvas id="equityChart" role="img" aria-label="評価額の推移を示す折れ線グラフ"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>戦略配分</h2>
+    <div class="card" id="weights-box"></div>
+  </section>
+
+  <section>
+    <h2>保有銘柄</h2>
+    <div class="card scroll-x">
+      <table id="positions-table">
+        <thead><tr><th>銘柄</th><th>戦略</th><th class="num">株数</th><th class="num">取得単価</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div class="empty" id="positions-empty" style="display:none;">現在の保有はありません</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>直近の取引</h2>
+    <div class="card scroll-x">
+      <table id="trades-table">
+        <thead><tr><th>日付</th><th>銘柄</th><th>売買</th><th class="num">株数</th><th class="num">価格</th><th class="num">損益</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div class="empty" id="trades-empty" style="display:none;">取引履歴はまだありません</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>学習履歴</h2>
+    <div class="card" id="learn-box"></div>
+  </section>
+
+  <footer>これは仮想売買の記録です。実際の発注は行っていません。</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const fmtYen = (v) => "¥" + Math.round(v).toLocaleString("ja-JP");
+const fmtPct = (v) => (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+
+fetch("data.json?_=" + Date.now())
+  .then(r => r.json())
+  .then(render)
+  .catch(err => {
+    document.getElementById("updated-line").textContent = "データの読み込みに失敗しました。初回実行がまだの可能性があります。";
+    console.error(err);
+  });
+
+function render(d) {
+  document.getElementById("mode-badge").textContent =
+    d.mode === "paper" ? "仮想売買" : d.mode === "demo" ? "デモ" : "実運用";
+  document.getElementById("updated-line").textContent =
+    d.generated_at ? "最終更新: " + d.generated_at : "まだ実行履歴がありません";
+
+  document.getElementById("kpi-equity").textContent = fmtYen(d.current_equity);
+  const retEl = document.getElementById("kpi-return");
+  retEl.textContent = fmtPct(d.total_return_pct);
+  retEl.className = "value " + (d.total_return_pct >= 0 ? "pos" : "neg");
+
+  renderRadar(d.radar);
+  renderEquity(d.equity_curve);
+  renderWeights(d.strategy_weights);
+  renderPositions(d.positions);
+  renderTrades(d.recent_trades);
+  renderLearnLog(d.learn_log);
+}
+
+function renderRadar(radar) {
+  if (!radar) return;
+  const labels = ["勝率", "損益率", "DD耐性", "取引効率", "安定性"];
+  const values = [radar.win_rate, radar.return, radar.dd_resilience, radar.efficiency, radar.stability];
+  new Chart(document.getElementById("radarChart"), {
+    type: "radar",
+    data: { labels, datasets: [{
+      label: "成績", data: values,
+      backgroundColor: "rgba(42,95,214,0.15)", borderColor: "#2a5fd6",
+      pointBackgroundColor: "#2a5fd6", borderWidth: 2,
+    }]},
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { r: { min: 0, max: 100, ticks: { display: false }, grid: { color: "#8b8a8433" } } },
+      plugins: { legend: { display: false } },
+    },
+  });
+}
+
+function renderEquity(curve) {
+  const box = document.getElementById("equityChart").parentElement;
+  if (!curve || curve.length === 0) {
+    box.outerHTML = '<div class="empty">まだ資産推移データがありません</div>';
+    return;
+  }
+  new Chart(document.getElementById("equityChart"), {
+    type: "line",
+    data: {
+      labels: curve.map(p => p.date),
+      datasets: [{
+        data: curve.map(p => p.equity), borderColor: "#2a5fd6",
+        backgroundColor: "rgba(42,95,214,0.08)", fill: true,
+        borderWidth: 2, pointRadius: 0, tension: 0.15,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { ticks: { maxTicksLimit: 6, color: "#8b8a84" }, grid: { display: false } },
+        y: { ticks: { callback: (v) => (v / 10000).toFixed(0) + "万", color: "#8b8a84" },
+             grid: { color: "#8b8a8422" } },
+      },
+      plugins: { legend: { display: false } },
+    },
+  });
+}
+
+function renderWeights(weights) {
+  const box = document.getElementById("weights-box");
+  if (!weights) { box.innerHTML = '<div class="empty">配分データがありません</div>'; return; }
+  const names = { trend: "トレンド", meanrev: "逆張り", breakout: "ブレイクアウト" };
+  box.innerHTML = Object.entries(weights).map(([k, v]) => {
+    const pct = v ? Math.round(v * 100) : 0;
+    return `<div class="weight-row">
+      <div class="name">${names[k] || k}</div>
+      <div class="weight-bar-bg"><div class="weight-bar-fill" style="width:${pct}%"></div></div>
+      <div class="pct">${pct}%</div>
+    </div>`;
+  }).join("");
+}
+
+function renderPositions(positions) {
+  const tbody = document.querySelector("#positions-table tbody");
+  const empty = document.getElementById("positions-empty");
+  if (!positions || positions.length === 0) {
+    tbody.innerHTML = ""; empty.style.display = "block"; return;
+  }
+  empty.style.display = "none";
+  const names = { trend: "トレンド", meanrev: "逆張り", breakout: "ブレイクアウト" };
+  tbody.innerHTML = positions.map(p => `
+    <tr>
+      <td>${p.ticker}</td>
+      <td>${names[p.strategy] || p.strategy}</td>
+      <td class="num">${p.shares}</td>
+      <td class="num">${fmtYen(p.avg_price)}</td>
+    </tr>`).join("");
+}
+
+function renderTrades(trades) {
+  const tbody = document.querySelector("#trades-table tbody");
+  const empty = document.getElementById("trades-empty");
+  if (!trades || trades.length === 0) {
+    tbody.innerHTML = ""; empty.style.display = "block"; return;
+  }
+  empty.style.display = "none";
+  tbody.innerHTML = trades.map(t => {
+    const sideLabel = t.side === "BUY" ? "買" : "売";
+    const sideClass = t.side === "BUY" ? "side-buy" : "side-sell";
+    const pnl = (t.pnl !== undefined && t.pnl !== null)
+      ? `<span class="${t.pnl >= 0 ? "pnl-pos" : "pnl-neg"}">${fmtYen(t.pnl)}</span>` : "-";
+    return `<tr>
+      <td>${t.date}</td>
+      <td>${t.ticker}</td>
+      <td class="${sideClass}">${sideLabel}</td>
+      <td class="num">${t.shares}</td>
+      <td class="num">${fmtYen(t.price)}</td>
+      <td class="num">${pnl}</td>
+    </tr>`;
+  }).join("");
+}
+
+function renderLearnLog(entries) {
+  const box = document.getElementById("learn-box");
+  if (!entries || entries.length === 0) {
+    box.innerHTML = '<div class="empty">まだ学習履歴がありません(月次ジョブ実行後に表示されます)</div>';
+    return;
+  }
+  const names = { trend: "トレンド", meanrev: "逆張り", breakout: "ブレイクアウト" };
+  box.innerHTML = entries.slice().reverse().map(e => {
+    const lines = (e.changes || []).map(c => {
+      const label = names[c.strategy] || c.strategy;
+      return c.action === "adopted"
+        ? `<span class="tag-adopt">${label}: パラメータ更新</span>`
+        : `<span class="tag-keep">${label}: 現状維持</span>`;
+    }).join(" ／ ");
+    return `<div class="learn-entry"><div class="date">${e.date}</div><div>${lines}</div></div>`;
+  }).join("");
+}
+</script>
+</body>
+</html>

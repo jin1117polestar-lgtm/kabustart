@@ -1,0 +1,20 @@
+{
+  "trend": {
+    "sma_short": 5,
+    "sma_long": 25,
+    "rsi_period": 14,
+    "rsi_buy_max": 70,
+    "rsi_sell_min": 75
+  },
+  "meanrev": {
+    "rsi_period": 14,
+    "meanrev_buy_rsi": 30,
+    "meanrev_sell_rsi": 55,
+    "meanrev_max_hold_days": 10
+  },
+  "breakout": {
+    "breakout_window": 20,
+    "atr_period": 14,
+    "breakout_atr_mult": 2.5
+  }
+}

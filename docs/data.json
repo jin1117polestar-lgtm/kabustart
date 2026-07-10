@@ -1,0 +1,33 @@
+{
+  "generated_at": null,
+  "mode": "paper",
+  "current_equity": 1000000,
+  "initial_capital": 1000000,
+  "total_return_pct": 0.0,
+  "radar": {
+    "win_rate": 50.0,
+    "return": 50.0,
+    "dd_resilience": 100,
+    "efficiency": 33.3,
+    "stability": 100
+  },
+  "equity_curve": [],
+  "strategy_weights": {
+    "trend": 0.34,
+    "meanrev": 0.33,
+    "breakout": 0.33
+  },
+  "positions": [],
+  "recent_trades": [],
+  "universe": [
+    "7203.T",
+    "6758.T",
+    "9984.T",
+    "8306.T",
+    "4063.T",
+    "6501.T",
+    "9433.T",
+    "8035.T"
+  ],
+  "learn_log": []
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17",
+  "generated_at": "2026-07-20",
   "mode": "paper",
   "current_equity": 996922.0,
   "initial_capital": 1000000,
@@ -9,7 +9,7 @@
     "return": 49.5,
     "dd_resilience": 97.6,
     "efficiency": 4.6,
-    "stability": 91.4
+    "stability": 92.1
   },
   "equity_curve": [
     {
@@ -34,6 +34,10 @@
     },
     {
       "date": "2026-07-17",
+      "equity": 996922.0
+    },
+    {
+      "date": "2026-07-20",
       "equity": 996922.0
     }
   ],

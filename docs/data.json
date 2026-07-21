@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-20",
+  "generated_at": "2026-07-21",
   "mode": "paper",
-  "current_equity": 996922.0,
+  "current_equity": 997258.0,
   "initial_capital": 1000000,
-  "total_return_pct": -0.31,
+  "total_return_pct": -0.27,
   "radar": {
     "win_rate": 50.0,
     "return": 49.5,
     "dd_resilience": 97.6,
     "efficiency": 4.6,
-    "stability": 92.1
+    "stability": 92.7
   },
   "equity_curve": [
     {
@@ -39,6 +39,10 @@
     {
       "date": "2026-07-20",
       "equity": 996922.0
+    },
+    {
+      "date": "2026-07-21",
+      "equity": 997258.0
     }
   ],
   "strategy_weights": {

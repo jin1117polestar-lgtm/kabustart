@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-24",
+  "generated_at": "2026-07-27",
   "mode": "paper",
-  "current_equity": 995669.0,
+  "current_equity": 996299.0,
   "initial_capital": 1000000,
-  "total_return_pct": -0.43,
+  "total_return_pct": -0.37,
   "radar": {
     "win_rate": 33.3,
-    "return": 49.3,
+    "return": 49.4,
     "dd_resilience": 97.2,
     "efficiency": 1.0,
-    "stability": 93.8
+    "stability": 94.0
   },
   "equity_curve": [
     {
@@ -55,6 +55,10 @@
     {
       "date": "2026-07-24",
       "equity": 995669.0
+    },
+    {
+      "date": "2026-07-27",
+      "equity": 996299.0
     }
   ],
   "strategy_weights": {
@@ -69,9 +73,69 @@
       "avg_price": 3750.0,
       "strategy": "breakout",
       "entry_date": "2026-07-23"
+    },
+    {
+      "ticker": "6758.T",
+      "shares": 15,
+      "avg_price": 3574.0,
+      "strategy": "breakout",
+      "entry_date": "2026-07-27"
+    },
+    {
+      "ticker": "4063.T",
+      "shares": 8,
+      "avg_price": 6146.0,
+      "strategy": "meanrev",
+      "entry_date": "2026-07-27"
+    },
+    {
+      "ticker": "6501.T",
+      "shares": 10,
+      "avg_price": 5023.0,
+      "strategy": "breakout",
+      "entry_date": "2026-07-27"
+    },
+    {
+      "ticker": "9433.T",
+      "shares": 18,
+      "avg_price": 2953.0,
+      "strategy": "breakout",
+      "entry_date": "2026-07-27"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-07-27",
+      "ticker": "9433.T",
+      "side": "BUY",
+      "shares": 18,
+      "price": 2953.0,
+      "strategy": "breakout"
+    },
+    {
+      "date": "2026-07-27",
+      "ticker": "6501.T",
+      "side": "BUY",
+      "shares": 10,
+      "price": 5023.0,
+      "strategy": "breakout"
+    },
+    {
+      "date": "2026-07-27",
+      "ticker": "4063.T",
+      "side": "BUY",
+      "shares": 8,
+      "price": 6146.0,
+      "strategy": "meanrev"
+    },
+    {
+      "date": "2026-07-27",
+      "ticker": "6758.T",
+      "side": "BUY",
+      "shares": 15,
+      "price": 3574.0,
+      "strategy": "breakout"
+    },
     {
       "date": "2026-07-23",
       "ticker": "4063.T",

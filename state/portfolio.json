@@ -13,7 +13,7 @@
       "avg_price": 3574.0,
       "strategy": "breakout",
       "entry_date": "2026-07-27",
-      "trail_stop": 3451.1071428571427
+      "trail_stop": 3583.464285714286
     },
     "4063.T": {
       "shares": 8,
@@ -34,14 +34,14 @@
       "avg_price": 2953.0,
       "strategy": "breakout",
       "entry_date": "2026-07-27",
-      "trail_stop": 2852.5535714285716
+      "trail_stop": 2956.660714285714
     },
     "7203.T": {
       "shares": 18,
       "avg_price": 3008.0,
       "strategy": "breakout",
       "entry_date": "2026-07-28",
-      "trail_stop": 2856.125
+      "trail_stop": 3043.0178571428573
     }
   },
   "history": [
@@ -197,7 +197,11 @@
     {
       "date": "2026-07-28",
       "equity": 992885.0
+    },
+    {
+      "date": "2026-07-29",
+      "equity": 1000066.0
     }
   ],
-  "last_run_date": "2026-07-28"
+  "last_run_date": "2026-07-29"
 }

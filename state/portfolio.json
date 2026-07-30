@@ -1,13 +1,6 @@
 {
-  "cash": 682807.0,
+  "cash": 679917.0,
   "positions": {
-    "8306.T": {
-      "shares": 14,
-      "avg_price": 3750.0,
-      "strategy": "breakout",
-      "entry_date": "2026-07-23",
-      "trail_stop": 3532.035714285714
-    },
     "6758.T": {
       "shares": 15,
       "avg_price": 3574.0,
@@ -27,7 +20,7 @@
       "avg_price": 5023.0,
       "strategy": "breakout",
       "entry_date": "2026-07-27",
-      "trail_stop": 4680.142857142857
+      "trail_stop": 4885.357142857143
     },
     "9433.T": {
       "shares": 18,
@@ -42,6 +35,13 @@
       "strategy": "breakout",
       "entry_date": "2026-07-28",
       "trail_stop": 3043.0178571428573
+    },
+    "8035.T": {
+      "shares": 1,
+      "avg_price": 52240.0,
+      "strategy": "meanrev",
+      "entry_date": "2026-07-30",
+      "trail_stop": null
     }
   },
   "history": [
@@ -143,6 +143,23 @@
       "shares": 18,
       "price": 3008.0,
       "strategy": "breakout"
+    },
+    {
+      "date": "2026-07-30",
+      "ticker": "8306.T",
+      "side": "SELL",
+      "shares": 14,
+      "price": 3525.0,
+      "strategy": "breakout",
+      "pnl": -3150.0
+    },
+    {
+      "date": "2026-07-30",
+      "ticker": "8035.T",
+      "side": "BUY",
+      "shares": 1,
+      "price": 52240.0,
+      "strategy": "meanrev"
     }
   ],
   "equity_curve": [
@@ -201,7 +218,11 @@
     {
       "date": "2026-07-29",
       "equity": 1000066.0
+    },
+    {
+      "date": "2026-07-30",
+      "equity": 999076.0
     }
   ],
-  "last_run_date": "2026-07-29"
+  "last_run_date": "2026-07-30"
 }

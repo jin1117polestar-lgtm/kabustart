@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-30",
+  "generated_at": "2026-07-31",
   "mode": "paper",
   "current_equity": 999076.0,
   "initial_capital": 1000000,
   "total_return_pct": -0.09,
   "radar": {
-    "win_rate": 25.0,
+    "win_rate": 20.0,
     "return": 49.8,
     "dd_resilience": 96.3,
     "efficiency": 0.6,
-    "stability": 91.0
+    "stability": 91.3
   },
   "equity_curve": [
     {
@@ -71,6 +71,10 @@
     {
       "date": "2026-07-30",
       "equity": 999076.0
+    },
+    {
+      "date": "2026-07-31",
+      "equity": 999076.0
     }
   ],
   "strategy_weights": {
@@ -101,13 +105,6 @@
       "entry_date": "2026-07-27"
     },
     {
-      "ticker": "9433.T",
-      "shares": 18,
-      "avg_price": 2953.0,
-      "strategy": "breakout",
-      "entry_date": "2026-07-27"
-    },
-    {
       "ticker": "7203.T",
       "shares": 18,
       "avg_price": 3008.0,
@@ -123,6 +120,15 @@
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-07-31",
+      "ticker": "9433.T",
+      "side": "SELL",
+      "shares": 18,
+      "price": 2921.0,
+      "strategy": "breakout",
+      "pnl": -576.0
+    },
     {
       "date": "2026-07-30",
       "ticker": "8035.T",

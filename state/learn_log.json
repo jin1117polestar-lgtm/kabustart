@@ -1,0 +1,44 @@
+{
+  "entries": [
+    {
+      "date": "2026-08-01",
+      "changes": [
+        {
+          "strategy": "trend",
+          "action": "adopted",
+          "old_valid_score": -1.18,
+          "new_valid_score": -0.61,
+          "new_params": {
+            "sma_short": 5,
+            "sma_long": 40,
+            "rsi_period": 14,
+            "rsi_buy_max": 65,
+            "rsi_sell_min": 80
+          }
+        },
+        {
+          "strategy": "meanrev",
+          "action": "adopted",
+          "old_valid_score": -1.19,
+          "new_valid_score": 1.23,
+          "new_params": {
+            "rsi_period": 14,
+            "meanrev_buy_rsi": 25,
+            "meanrev_sell_rsi": 50,
+            "meanrev_max_hold_days": 7
+          }
+        },
+        {
+          "strategy": "breakout",
+          "action": "kept",
+          "valid_score": 0.32
+        }
+      ],
+      "new_weights": {
+        "trend": 0.3333,
+        "meanrev": 0.3335,
+        "breakout": 0.3332
+      }
+    }
+  ]
+}

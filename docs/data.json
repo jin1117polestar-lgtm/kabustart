@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-24",
   "mode": "paper",
   "current_equity": 998869.0,
   "initial_capital": 1000000,
@@ -9,7 +9,7 @@
     "return": 49.8,
     "dd_resilience": 96.3,
     "efficiency": 29.5,
-    "stability": 91.9
+    "stability": 92.0
   },
   "equity_curve": [
     {
@@ -134,6 +134,10 @@
     },
     {
       "date": "2026-08-21",
+      "equity": 998869.0
+    },
+    {
+      "date": "2026-08-24",
       "equity": 998869.0
     }
   ],

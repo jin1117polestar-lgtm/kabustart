@@ -1,10 +1,10 @@
 {
   "trend": {
-    "sma_short": 5,
-    "sma_long": 40,
+    "sma_short": 10,
+    "sma_long": 50,
     "rsi_period": 14,
-    "rsi_buy_max": 65,
-    "rsi_sell_min": 80
+    "rsi_buy_max": 70,
+    "rsi_sell_min": 75
   },
   "meanrev": {
     "rsi_period": 14,

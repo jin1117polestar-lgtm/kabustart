@@ -178,9 +178,9 @@
     }
   ],
   "strategy_weights": {
-    "trend": 0.3333,
-    "meanrev": 0.3335,
-    "breakout": 0.3332
+    "trend": 0.3332,
+    "meanrev": 0.3337,
+    "breakout": 0.3331
   },
   "positions": [
     {
@@ -445,6 +445,39 @@
         "trend": 0.3333,
         "meanrev": 0.3335,
         "breakout": 0.3332
+      }
+    },
+    {
+      "date": "2026-09-05",
+      "changes": [
+        {
+          "strategy": "trend",
+          "action": "adopted",
+          "old_valid_score": -3.27,
+          "new_valid_score": -1.39,
+          "new_params": {
+            "sma_short": 10,
+            "sma_long": 50,
+            "rsi_period": 14,
+            "rsi_buy_max": 70,
+            "rsi_sell_min": 75
+          }
+        },
+        {
+          "strategy": "meanrev",
+          "action": "kept",
+          "valid_score": 1.33
+        },
+        {
+          "strategy": "breakout",
+          "action": "kept",
+          "valid_score": -6.88
+        }
+      ],
+      "new_weights": {
+        "trend": 0.3332,
+        "meanrev": 0.3337,
+        "breakout": 0.3331
       }
     }
   ]

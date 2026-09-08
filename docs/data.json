@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07",
+  "generated_at": "2026-09-08",
   "mode": "paper",
-  "current_equity": 994521.0,
+  "current_equity": 989230.0,
   "initial_capital": 1000000,
-  "total_return_pct": -0.55,
+  "total_return_pct": -1.08,
   "radar": {
-    "win_rate": 33.3,
-    "return": 49.1,
-    "dd_resilience": 96.3,
-    "efficiency": 22.5,
-    "stability": 92.5
+    "win_rate": 30.8,
+    "return": 48.2,
+    "dd_resilience": 95.1,
+    "efficiency": 18.0,
+    "stability": 92.2
   },
   "equity_curve": [
     {
@@ -179,6 +179,10 @@
     {
       "date": "2026-09-07",
       "equity": 994521.0
+    },
+    {
+      "date": "2026-09-08",
+      "equity": 989230.5
     }
   ],
   "strategy_weights": {
@@ -187,13 +191,6 @@
     "breakout": 0.3331
   },
   "positions": [
-    {
-      "ticker": "7203.T",
-      "shares": 17,
-      "avg_price": 3156.0,
-      "strategy": "breakout",
-      "entry_date": "2026-08-31"
-    },
     {
       "ticker": "4063.T",
       "shares": 9,
@@ -221,9 +218,33 @@
       "avg_price": 53320.0,
       "strategy": "meanrev",
       "entry_date": "2026-09-04"
+    },
+    {
+      "ticker": "9984.T",
+      "shares": 8,
+      "avg_price": 6556.0,
+      "strategy": "breakout",
+      "entry_date": "2026-09-08"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-09-08",
+      "ticker": "9984.T",
+      "side": "BUY",
+      "shares": 8,
+      "price": 6556.0,
+      "strategy": "breakout"
+    },
+    {
+      "date": "2026-09-08",
+      "ticker": "7203.T",
+      "side": "SELL",
+      "shares": 17,
+      "price": 2968.5,
+      "strategy": "breakout",
+      "pnl": -3187.5
+    },
     {
       "date": "2026-09-07",
       "ticker": "6758.T",
@@ -375,22 +396,6 @@
       "side": "BUY",
       "shares": 18,
       "price": 3008.0,
-      "strategy": "breakout"
-    },
-    {
-      "date": "2026-07-27",
-      "ticker": "9433.T",
-      "side": "BUY",
-      "shares": 18,
-      "price": 2953.0,
-      "strategy": "breakout"
-    },
-    {
-      "date": "2026-07-27",
-      "ticker": "6501.T",
-      "side": "BUY",
-      "shares": 10,
-      "price": 5023.0,
       "strategy": "breakout"
     }
   ],

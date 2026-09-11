@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-10",
+  "generated_at": "2026-09-11",
   "mode": "paper",
-  "current_equity": 991012.0,
+  "current_equity": 987902.0,
   "initial_capital": 1000000,
-  "total_return_pct": -0.9,
+  "total_return_pct": -1.21,
   "radar": {
-    "win_rate": 28.6,
-    "return": 48.5,
-    "dd_resilience": 95.1,
-    "efficiency": 16.2,
+    "win_rate": 26.7,
+    "return": 48.0,
+    "dd_resilience": 94.7,
+    "efficiency": 14.6,
     "stability": 92.3
   },
   "equity_curve": [
@@ -191,6 +191,10 @@
     {
       "date": "2026-09-10",
       "equity": 991011.5
+    },
+    {
+      "date": "2026-09-11",
+      "equity": 987901.5
     }
   ],
   "strategy_weights": {
@@ -214,21 +218,38 @@
       "entry_date": "2026-09-03"
     },
     {
-      "ticker": "8035.T",
-      "shares": 1,
-      "avg_price": 53320.0,
-      "strategy": "meanrev",
-      "entry_date": "2026-09-04"
-    },
-    {
       "ticker": "9984.T",
       "shares": 8,
       "avg_price": 6556.0,
       "strategy": "breakout",
       "entry_date": "2026-09-08"
+    },
+    {
+      "ticker": "4063.T",
+      "shares": 9,
+      "avg_price": 5738.0,
+      "strategy": "meanrev",
+      "entry_date": "2026-09-11"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-09-11",
+      "ticker": "8035.T",
+      "side": "SELL",
+      "shares": 1,
+      "price": 51460.0,
+      "strategy": "meanrev",
+      "pnl": -1860.0
+    },
+    {
+      "date": "2026-09-11",
+      "ticker": "4063.T",
+      "side": "BUY",
+      "shares": 9,
+      "price": 5738.0,
+      "strategy": "meanrev"
+    },
     {
       "date": "2026-09-10",
       "ticker": "4063.T",
@@ -382,23 +403,6 @@
       "price": 2921.0,
       "strategy": "breakout",
       "pnl": -576.0
-    },
-    {
-      "date": "2026-07-30",
-      "ticker": "8035.T",
-      "side": "BUY",
-      "shares": 1,
-      "price": 52240.0,
-      "strategy": "meanrev"
-    },
-    {
-      "date": "2026-07-30",
-      "ticker": "8306.T",
-      "side": "SELL",
-      "shares": 14,
-      "price": 3525.0,
-      "strategy": "breakout",
-      "pnl": -3150.0
     }
   ],
   "universe": [

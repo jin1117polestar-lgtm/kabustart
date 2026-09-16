@@ -6,7 +6,7 @@
       "avg_price": 3007.0,
       "strategy": "breakout",
       "entry_date": "2026-09-01",
-      "trail_stop": 2945.9821428571427
+      "trail_stop": 2948.1964285714284
     },
     "8306.T": {
       "shares": 14,
@@ -513,7 +513,11 @@
     {
       "date": "2026-09-15",
       "equity": 982220.5
+    },
+    {
+      "date": "2026-09-16",
+      "equity": 983811.5
     }
   ],
-  "last_run_date": "2026-09-15"
+  "last_run_date": "2026-09-16"
 }

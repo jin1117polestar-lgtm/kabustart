@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18",
+  "generated_at": "2026-09-21",
   "mode": "paper",
   "current_equity": 983196.0,
   "initial_capital": 1000000,
@@ -214,6 +214,10 @@
     },
     {
       "date": "2026-09-18",
+      "equity": 983195.5
+    },
+    {
+      "date": "2026-09-21",
       "equity": 983195.5
     }
   ],

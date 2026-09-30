@@ -27,7 +27,7 @@
       "avg_price": 11505.0,
       "strategy": "breakout",
       "entry_date": "2026-09-29",
-      "trail_stop": 10386.14858279291
+      "trail_stop": 10713.985464407842
     }
   },
   "history": [
@@ -602,7 +602,11 @@
     {
       "date": "2026-09-29",
       "equity": 978771.5
+    },
+    {
+      "date": "2026-09-30",
+      "equity": 982594.5
     }
   ],
-  "last_run_date": "2026-09-29"
+  "last_run_date": "2026-09-30"
 }

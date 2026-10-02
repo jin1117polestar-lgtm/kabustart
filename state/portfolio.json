@@ -1,13 +1,6 @@
 {
-  "cash": 830998.5,
+  "cash": 880614.5,
   "positions": {
-    "8306.T": {
-      "shares": 14,
-      "avg_price": 3754.0,
-      "strategy": "breakout",
-      "entry_date": "2026-09-03",
-      "trail_stop": 3568.9285714285716
-    },
     "6758.T": {
       "shares": 14,
       "avg_price": 3732.0,
@@ -370,6 +363,15 @@
       "price": 2925.0,
       "strategy": "meanrev",
       "pnl": -792.0
+    },
+    {
+      "date": "2026-10-02",
+      "ticker": "8306.T",
+      "side": "SELL",
+      "shares": 14,
+      "price": 3544.0,
+      "strategy": "breakout",
+      "pnl": -2940.0
     }
   ],
   "equity_curve": [
@@ -612,7 +614,11 @@
     {
       "date": "2026-10-01",
       "equity": 984540.5
+    },
+    {
+      "date": "2026-10-02",
+      "equity": 981556.5
     }
   ],
-  "last_run_date": "2026-10-01"
+  "last_run_date": "2026-10-02"
 }

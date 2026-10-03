@@ -258,9 +258,9 @@
     }
   ],
   "strategy_weights": {
-    "trend": 0.3332,
-    "meanrev": 0.3337,
-    "breakout": 0.3331
+    "trend": 0.3337,
+    "meanrev": 0.334,
+    "breakout": 0.3324
   },
   "positions": [
     {
@@ -531,6 +531,37 @@
         "trend": 0.3332,
         "meanrev": 0.3337,
         "breakout": 0.3331
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "changes": [
+        {
+          "strategy": "trend",
+          "action": "kept",
+          "valid_score": -0.17
+        },
+        {
+          "strategy": "meanrev",
+          "action": "kept",
+          "valid_score": 0.76
+        },
+        {
+          "strategy": "breakout",
+          "action": "adopted",
+          "old_valid_score": -9.37,
+          "new_valid_score": -9.25,
+          "new_params": {
+            "breakout_window": 30,
+            "atr_period": 14,
+            "breakout_atr_mult": 3.0
+          }
+        }
+      ],
+      "new_weights": {
+        "trend": 0.3337,
+        "meanrev": 0.334,
+        "breakout": 0.3324
       }
     }
   ]

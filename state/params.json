@@ -13,8 +13,8 @@
     "meanrev_max_hold_days": 7
   },
   "breakout": {
-    "breakout_window": 20,
+    "breakout_window": 30,
     "atr_period": 14,
-    "breakout_atr_mult": 2.5
+    "breakout_atr_mult": 3.0
   }
 }

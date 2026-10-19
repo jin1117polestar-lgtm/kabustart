@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-16",
+  "generated_at": "2026-10-19",
   "mode": "paper",
-  "current_equity": 979302.0,
+  "current_equity": 979866.0,
   "initial_capital": 1000000,
-  "total_return_pct": -2.07,
+  "total_return_pct": -2.01,
   "radar": {
-    "win_rate": 23.8,
+    "win_rate": 30.4,
     "return": 46.6,
     "dd_resilience": 91.3,
-    "efficiency": 10.1,
-    "stability": 92.2
+    "efficiency": 15.2,
+    "stability": 92.3
   },
   "equity_curve": [
     {
@@ -287,6 +287,10 @@
     {
       "date": "2026-10-16",
       "equity": 979301.5
+    },
+    {
+      "date": "2026-10-19",
+      "equity": 979865.5
     }
   ],
   "strategy_weights": {
@@ -296,28 +300,32 @@
   },
   "positions": [
     {
-      "ticker": "6758.T",
-      "shares": 14,
-      "avg_price": 3732.0,
-      "strategy": "trend",
-      "entry_date": "2026-09-29"
-    },
-    {
       "ticker": "4063.T",
       "shares": 8,
       "avg_price": 6321.0,
       "strategy": "breakout",
       "entry_date": "2026-10-06"
-    },
-    {
-      "ticker": "9433.T",
-      "shares": 19,
-      "avg_price": 2855.0,
-      "strategy": "meanrev",
-      "entry_date": "2026-10-14"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-10-19",
+      "ticker": "9433.T",
+      "side": "SELL",
+      "shares": 19,
+      "price": 2944.0,
+      "strategy": "meanrev",
+      "pnl": 1691.0
+    },
+    {
+      "date": "2026-10-19",
+      "ticker": "6758.T",
+      "side": "SELL",
+      "shares": 14,
+      "price": 3960.0,
+      "strategy": "trend",
+      "pnl": 3192.0
+    },
     {
       "date": "2026-10-14",
       "ticker": "8035.T",
@@ -471,22 +479,6 @@
       "shares": 1,
       "price": 53320.0,
       "strategy": "meanrev"
-    },
-    {
-      "date": "2026-09-03",
-      "ticker": "8306.T",
-      "side": "BUY",
-      "shares": 14,
-      "price": 3754.0,
-      "strategy": "breakout"
-    },
-    {
-      "date": "2026-09-01",
-      "ticker": "9433.T",
-      "side": "BUY",
-      "shares": 18,
-      "price": 3007.0,
-      "strategy": "breakout"
     }
   ],
   "universe": [

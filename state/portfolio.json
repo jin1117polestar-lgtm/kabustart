@@ -1,6 +1,14 @@
 {
-  "cash": 979089.5,
-  "positions": {},
+  "cash": 923625.5,
+  "positions": {
+    "9984.T": {
+      "shares": 12,
+      "avg_price": 4622.0,
+      "strategy": "meanrev",
+      "entry_date": "2026-10-21",
+      "trail_stop": null
+    }
+  },
   "history": [
     {
       "date": "2026-07-10",
@@ -409,6 +417,14 @@
       "price": 5869.0,
       "strategy": "breakout",
       "pnl": -3616.0
+    },
+    {
+      "date": "2026-10-21",
+      "ticker": "9984.T",
+      "side": "BUY",
+      "shares": 12,
+      "price": 4622.0,
+      "strategy": "meanrev"
     }
   ],
   "equity_curve": [
@@ -695,7 +711,11 @@
     {
       "date": "2026-10-20",
       "equity": 979089.5
+    },
+    {
+      "date": "2026-10-21",
+      "equity": 979089.5
     }
   ],
-  "last_run_date": "2026-10-20"
+  "last_run_date": "2026-10-21"
 }

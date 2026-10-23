@@ -13,7 +13,7 @@
       "avg_price": 4081.0,
       "strategy": "breakout",
       "entry_date": "2026-10-22",
-      "trail_stop": 3827.5
+      "trail_stop": 3871.0714285714284
     },
     "8035.T": {
       "shares": 5,
@@ -749,7 +749,11 @@
     {
       "date": "2026-10-22",
       "equity": 975285.5
+    },
+    {
+      "date": "2026-10-23",
+      "equity": 975705.5
     }
   ],
-  "last_run_date": "2026-10-22"
+  "last_run_date": "2026-10-23"
 }

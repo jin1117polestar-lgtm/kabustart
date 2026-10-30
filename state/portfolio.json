@@ -1,5 +1,5 @@
 {
-  "cash": 878027.5,
+  "cash": 830457.5,
   "positions": {
     "6758.T": {
       "shares": 13,
@@ -13,6 +13,13 @@
       "avg_price": 5850.0,
       "strategy": "meanrev",
       "entry_date": "2026-10-27",
+      "trail_stop": null
+    },
+    "8035.T": {
+      "shares": 5,
+      "avg_price": 9514.0,
+      "strategy": "meanrev",
+      "entry_date": "2026-10-30",
       "trail_stop": null
     }
   },
@@ -474,6 +481,14 @@
       "price": 10035.0,
       "strategy": "meanrev",
       "pnl": 2925.0
+    },
+    {
+      "date": "2026-10-30",
+      "ticker": "8035.T",
+      "side": "BUY",
+      "shares": 5,
+      "price": 9514.0,
+      "strategy": "meanrev"
     }
   ],
   "equity_curve": [
@@ -788,7 +803,11 @@
     {
       "date": "2026-10-29",
       "equity": 983285.5
+    },
+    {
+      "date": "2026-10-30",
+      "equity": 983175.5
     }
   ],
-  "last_run_date": "2026-10-29"
+  "last_run_date": "2026-10-30"
 }

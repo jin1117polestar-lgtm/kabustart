@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-05",
+  "generated_at": "2026-11-06",
   "mode": "paper",
-  "current_equity": 980912.0,
+  "current_equity": 972110.0,
   "initial_capital": 1000000,
-  "total_return_pct": -1.91,
+  "total_return_pct": -2.79,
   "radar": {
-    "win_rate": 37.0,
-    "return": 46.8,
-    "dd_resilience": 90.0,
-    "efficiency": 18.6,
-    "stability": 92.2
+    "win_rate": 35.7,
+    "return": 45.4,
+    "dd_resilience": 89.4,
+    "efficiency": 15.8,
+    "stability": 91.6
   },
   "equity_curve": [
     {
@@ -339,6 +339,10 @@
     {
       "date": "2026-11-05",
       "equity": 980912.5
+    },
+    {
+      "date": "2026-11-06",
+      "equity": 972110.5
     }
   ],
   "strategy_weights": {
@@ -355,13 +359,6 @@
       "entry_date": "2026-10-22"
     },
     {
-      "ticker": "8035.T",
-      "shares": 5,
-      "avg_price": 9514.0,
-      "strategy": "meanrev",
-      "entry_date": "2026-10-30"
-    },
-    {
       "ticker": "6501.T",
       "shares": 11,
       "avg_price": 4894.0,
@@ -374,9 +371,48 @@
       "avg_price": 3533.0,
       "strategy": "breakout",
       "entry_date": "2026-11-05"
+    },
+    {
+      "ticker": "9984.T",
+      "shares": 15,
+      "avg_price": 3549.0,
+      "strategy": "meanrev",
+      "entry_date": "2026-11-06"
+    },
+    {
+      "ticker": "4063.T",
+      "shares": 10,
+      "avg_price": 5312.0,
+      "strategy": "meanrev",
+      "entry_date": "2026-11-06"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-11-06",
+      "ticker": "8035.T",
+      "side": "SELL",
+      "shares": 5,
+      "price": 8263.0,
+      "strategy": "meanrev",
+      "pnl": -6255.0
+    },
+    {
+      "date": "2026-11-06",
+      "ticker": "4063.T",
+      "side": "BUY",
+      "shares": 10,
+      "price": 5312.0,
+      "strategy": "meanrev"
+    },
+    {
+      "date": "2026-11-06",
+      "ticker": "9984.T",
+      "side": "BUY",
+      "shares": 15,
+      "price": 3549.0,
+      "strategy": "meanrev"
+    },
     {
       "date": "2026-11-05",
       "ticker": "7203.T",
@@ -520,32 +556,6 @@
       "price": 3544.0,
       "strategy": "breakout",
       "pnl": -2940.0
-    },
-    {
-      "date": "2026-10-01",
-      "ticker": "7203.T",
-      "side": "SELL",
-      "shares": 18,
-      "price": 2925.0,
-      "strategy": "meanrev",
-      "pnl": -792.0
-    },
-    {
-      "date": "2026-09-29",
-      "ticker": "8035.T",
-      "side": "BUY",
-      "shares": 4,
-      "price": 11505.0,
-      "strategy": "breakout"
-    },
-    {
-      "date": "2026-09-29",
-      "ticker": "9433.T",
-      "side": "SELL",
-      "shares": 18,
-      "price": 2923.5,
-      "strategy": "breakout",
-      "pnl": -1503.0
     }
   ],
   "universe": [

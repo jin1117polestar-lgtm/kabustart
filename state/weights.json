@@ -1,7 +1,7 @@
 {
-  "trend": 0.3337,
+  "trend": 0.3339,
   "meanrev": 0.334,
-  "breakout": 0.3324,
+  "breakout": 0.3321,
   "daily_returns_log": {
     "trend": [
       0.0,
@@ -259,5 +259,5 @@
       0.0
     ]
   },
-  "updated": "2026-10-03"
+  "updated": "2026-11-07"
 }

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-11",
+  "generated_at": "2026-11-13",
   "mode": "paper",
-  "current_equity": 987368.0,
+  "current_equity": 984432.0,
   "initial_capital": 1000000,
-  "total_return_pct": -1.26,
+  "total_return_pct": -1.56,
   "radar": {
-    "win_rate": 37.9,
-    "return": 47.9,
+    "win_rate": 38.7,
+    "return": 47.4,
     "dd_resilience": 89.4,
-    "efficiency": 16.3,
-    "stability": 89.8
+    "efficiency": 19.4,
+    "stability": 89.9
   },
   "equity_curve": [
     {
@@ -347,6 +347,10 @@
     {
       "date": "2026-11-11",
       "equity": 987367.5
+    },
+    {
+      "date": "2026-11-13",
+      "equity": 984431.5
     }
   ],
   "strategy_weights": {
@@ -368,23 +372,27 @@
       "avg_price": 3533.0,
       "strategy": "breakout",
       "entry_date": "2026-11-05"
-    },
-    {
-      "ticker": "9984.T",
-      "shares": 15,
-      "avg_price": 3549.0,
-      "strategy": "meanrev",
-      "entry_date": "2026-11-06"
-    },
-    {
-      "ticker": "4063.T",
-      "shares": 10,
-      "avg_price": 5312.0,
-      "strategy": "meanrev",
-      "entry_date": "2026-11-06"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-11-13",
+      "ticker": "4063.T",
+      "side": "SELL",
+      "shares": 10,
+      "price": 5704.0,
+      "strategy": "meanrev",
+      "pnl": 3920.0
+    },
+    {
+      "date": "2026-11-13",
+      "ticker": "9984.T",
+      "side": "SELL",
+      "shares": 15,
+      "price": 3547.0,
+      "strategy": "meanrev",
+      "pnl": -30.0
+    },
     {
       "date": "2026-11-11",
       "ticker": "6501.T",
@@ -537,22 +545,6 @@
       "price": 11240.0,
       "strategy": "breakout",
       "pnl": -1060.0
-    },
-    {
-      "date": "2026-10-14",
-      "ticker": "9433.T",
-      "side": "BUY",
-      "shares": 19,
-      "price": 2855.0,
-      "strategy": "meanrev"
-    },
-    {
-      "date": "2026-10-06",
-      "ticker": "4063.T",
-      "side": "BUY",
-      "shares": 8,
-      "price": 6321.0,
-      "strategy": "breakout"
     }
   ],
   "universe": [
